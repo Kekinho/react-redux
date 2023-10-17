@@ -1,0 +1,28 @@
+/* CustomPieChart.css */
+.chart-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Coloca a figura e as legendas em colunas */
+}
+
+
+.chart-info {
+  display: flex;
+  flex-direction: column; /* Configura o layout em colunas para as legendas */
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Espaçamento entre as legendas */
+}
+
+.color-box {
+  width: 20px; /* Largura do bloco de cor */
+  height: 20px; /* Altura do bloco de cor */
+  margin-right: 5px; /* Espaçamento entre o bloco de cor e o texto da legenda */
+}
+
+.legend-text {
+  font-size: 10px; /* Tamanho da fonte da legenda */
+}

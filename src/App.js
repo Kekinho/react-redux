@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/card/Card';
+import CustomPieChart from './components/charts/pie/CustomPieChart';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className='App'>
+      <h1>Dashboard</h1>
+      <div className='Cards'>
+        <Card title='Card 1' grey>
+          x
+        </Card>
+        <CustomPieChart title='Charts 1' grey>
+          x
+        </CustomPieChart>
+        <Card title='Card 3' grey>
+          x
+        </Card>
+        <Card title='Card 4' grey>
+          x
+        </Card>
+      </div>
+      </div>
   );
 }
 
