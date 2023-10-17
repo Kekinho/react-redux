@@ -4,17 +4,13 @@ import CustomPie from './CustomPie';
 import Legends from './Legends';
 import './CustomPieChart.css'
 
-const data = [
-    { name: 'Group A', value: 400 },
-    { name: 'Group B', value: 300 },
-    { name: 'Group C', value: 300 },
-    { name: 'Group D', value: 200 },
-];
+
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 // eslint-disable-next-line
 export default props => {
+    const data = props.data
     return (
         <Card title="Chart" grey>
             <div className='chart-content'>

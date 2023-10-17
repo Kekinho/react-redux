@@ -4,7 +4,7 @@
     margin: 10px;
     flex-direction: column;
     border: 3x solid grey;
-/*    border-radius: 10px; */
+    border-radius: 5px; 
     overflow: hidden;
     min-width: 300px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 

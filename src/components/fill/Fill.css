@@ -1,0 +1,29 @@
+.Fill {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input {
+    font-size: 1.8rem;
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+    }
+}
+
