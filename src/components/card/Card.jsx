@@ -22,7 +22,5 @@ export default props => {
             <span>{props.children}</span>
         </div>
         </div>
-
-
     )
 }

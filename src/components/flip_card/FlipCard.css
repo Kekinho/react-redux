@@ -1,0 +1,91 @@
+.FlipCard {
+    flex: 1; 
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+/*    border: 3px solid grey; */
+    border-radius: 5px;
+    overflow: hidden;
+    min-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    perspective: 1000px; 
+
+}
+
+.FlipCard-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.FlipCard .FlipCard-inner .Header {
+    display: flex;
+    justify-content: center;
+}
+
+.FlipCard .FlipCard-inner .Header .Title {
+    padding: 5px;
+}
+
+.FlipCard-front,
+.FlipCard-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.FlipCard-front {
+    background-color: #f2f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FlipCard-back {
+    background-color: #e74c3c;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FlipCard.flipped .FlipCard-inner {
+    transform: rotateY(180deg);
+}
+
+.FlipCard-front {
+    background-color: #f2f5f5;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: center; 
+}
+
+.FlipCard-front .Title {
+    padding: 5px;
+    font-weight: bold;
+    font-size: 18px; 
+}
+
+.FlipCard-back {
+    background-color: #e74c3c;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FlipCard-back .Title {
+    padding: 5px;
+    font-weight: bold;
+    font-size: 18px; 
+}
+
+@media (max-width: 768px) {
+    .FlipCard {
+        min-width: 100%;
+    }
+}
