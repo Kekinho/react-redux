@@ -11,7 +11,7 @@ export default function FlipCard(props) {
     return (
         <div className={`FlipCard ${isFlipped ? 'flipped' : ''}`} onClick={handleFlip}>
             <div className="FlipCard-inner">
-            <div className="FlipCard-front">
+                <div className="FlipCard-front">
                     <div className="Header">
                         <span className="Title">{props.title}</span>
                     </div>

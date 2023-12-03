@@ -3,3 +3,30 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+/* Adicione essas regras de estilo ao seu arquivo CSS (por exemplo, App.css) */
+
+nav {
+  background-color: rgba(51, 51, 51, 0); /* Cor de fundo do menu */
+}
+
+ul {
+  list-style-type: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o preenchimento padrão da lista */
+  display: flex; /* Torna os itens da lista flexíveis para alinhamento horizontal */
+}
+
+li {
+  margin-right: 20px; /* Espaçamento entre os itens do menu */
+}
+
+Link {
+  text-decoration: none; /* Remove a sublinhado padrão dos links */
+  color: white; /* Cor do texto dos links */
+  font-weight: bold; /* Deixa o texto em negrito */
+  font-size: 16px; /* Tamanho da fonte dos links */
+}
+
+Link:hover {
+  color: #ffcc00; /* Cor do texto ao passar o mouse sobre os links */
+}

@@ -1,36 +1,34 @@
 import './App.css';
-import React, {useState } from 'react';
-import Card from './components/card/Card';
-import CustomPieChart from './components/charts/pie/CustomPieChart';
-import Fill from './components/fill/Fill'
-import FlipCard from './components/flip_card/FlipCard';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import StaticSketch from './home/StaticSketch';
+import DynamicSketch from './home/DynamicSketch';
+
 
 function App() {
-
-  const [isCardFlipped, setIsCardFlipped] = useState(false);
-
-  const handleCardFlip = () => {
-      setIsCardFlipped(!isCardFlipped);
-  }
- 
   return (
-    <div className='App'>
-      <h1>Dashboard</h1>
-      <div className='Cards'>
-        <Fill ></Fill>
-        <CustomPieChart></CustomPieChart>
-        <FlipCard title='Flip Card' grey>
-          x
-        </FlipCard>
-        <FlipCard title='Flip Card' grey>
-          x
-        </FlipCard>
-        <Card title='Card 4' grey>
-          x
-        </Card>
-        <CustomPieChart></CustomPieChart>
+    <Router>
+      <div className="App">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/staticsketch">StaticSketch</Link>
+            </li>
+            <li>
+              <Link to="/dynamicsketch">DynamicSketch</Link>
+            </li>            
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/staticsketch" element={<StaticSketch />} />
+          <Route path="/dynamicsketch" element={<DynamicSketch />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 
