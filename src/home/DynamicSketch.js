@@ -26,7 +26,7 @@ function DynamicSketch() {
     }
 
     fetchData();
-    const intervalId = setInterval(fetchData, 1 * 60 * 1000);
+    const intervalId = setInterval(fetchData, 20 * 60 * 1000);
 
     return () => clearInterval(intervalId);
   }, []);
