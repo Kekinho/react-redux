@@ -11,6 +11,11 @@ import {
 } from "recharts";
 
 export default (props) => {
+
+  const minValue = Math.min(...props.data.map((entry) => entry.value));
+  const maxValue = Math.max(...props.data.map((entry) => entry.value));
+  
+  const tickInterval = 1; 
   return (
     <Card title="Chart" grey>
       <LineChart
@@ -20,7 +25,13 @@ export default (props) => {
         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
       >
         <XAxis dataKey="name" />
-        <YAxis />
+        <YAxis
+          domain={[minValue - tickInterval, maxValue + tickInterval]} // Defina o domínio do eixo Y
+          ticks={Array.from(
+            { length: Math.ceil((maxValue - minValue) / tickInterval) + 1 },
+            (_, index) => minValue - tickInterval + index * tickInterval
+          )} // Gere os ticks com base no intervalo desejado
+        />
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
         <Legend />

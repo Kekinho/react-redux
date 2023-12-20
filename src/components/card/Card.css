@@ -1,15 +1,16 @@
-.Card{
+.Card {
     flex: 1;
     display: flex;
     margin: 10px;
     flex-direction: column;
-    border: 3x solid grey;
-    border-radius: 5px; 
+    border: 3px solid grey;
+    border-radius: 5px;
     overflow: hidden;
-    min-width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
-    transition: box-shadow 0.3s ease-in-out; 
-}
+    min-width: 400px; /* Tamanho mínimo desejado em pixels */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    width: 100%; /* Garante que o card ocupe 100% da largura disponível */
+  }
 
 .Card .Header {
     display: flex;

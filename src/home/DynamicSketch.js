@@ -31,7 +31,13 @@ function DynamicSketch() {
     return () => clearInterval(intervalId);
   }, []);
   
-  const lineChartStocksKeys = ['AAPL', 'MSFT', 'AMZN', 'TSLA', 'FB']; 
+  //const lineChartStocksKeys = ['AAPL', 'MSFT', 'AMZN', 'TSLA', 'FB']; 
+  const lineChartStocksKeys1 = ['AAPL']; 
+  const lineChartStocksKeys2 = ['MSFT']; 
+  const lineChartStocksKeys3 = ['AMZN']; 
+  const lineChartStocksKeys4 = ['TSLA']; 
+  const lineChartStocksKeys5 = ['FB'];
+
   // Ajuste de exemplo para o gráfico de linha
 /*    const lineChartData = [
     { name: '22:10', acao1: 30, acao2: 40, acao3: 25 },
@@ -47,7 +53,11 @@ function DynamicSketch() {
     <div className='App'>
       <h1>Dashboard</h1>
       <div className='Cards'>
-        <CustomChartLine data={stockData} dataKeys={lineChartStocksKeys} colors={['#8884d8', '#82ca9d', '#ffc658']}/>
+        <CustomChartLine data={stockData} dataKeys={lineChartStocksKeys1} colors={['#8884d8', '#82ca9d', '#ffc658']}/>
+        <CustomChartLine data={stockData} dataKeys={lineChartStocksKeys2} colors={['#8884d8', '#82ca9d', '#ffc658']}/>
+        <CustomChartLine data={stockData} dataKeys={lineChartStocksKeys3} colors={['#8884d8', '#82ca9d', '#ffc658']}/>
+        <CustomChartLine data={stockData} dataKeys={lineChartStocksKeys4} colors={['#8884d8', '#82ca9d', '#ffc658']}/>
+        <CustomChartLine data={stockData} dataKeys={lineChartStocksKeys5} colors={['#8884d8', '#82ca9d', '#ffc658']}/>
       </div>
     </div>
   );
