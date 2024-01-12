@@ -36,7 +36,7 @@ function DynamicSketch() {
   const lineChartStocksKeys2 = ['MSFT']; 
   const lineChartStocksKeys3 = ['AMZN']; 
   const lineChartStocksKeys4 = ['TSLA']; 
-  const lineChartStocksKeys5 = ['FB'];
+  const lineChartStocksKeys5 = ['META'];
 
   // Ajuste de exemplo para o gráfico de linha
 /*    const lineChartData = [
